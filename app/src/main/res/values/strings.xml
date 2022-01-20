@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Notes</string>
+    <string name="fab">Создать новую заметку</string>
+    <string name="button_save">Сохранить</string>
+    <string name="title">Заголовок</string>
+    <string name="message">Текст</string>
+    <string name="action_update">Редактировать</string>
+    <string name="action_delete">Удалить</string>
 </resources>
