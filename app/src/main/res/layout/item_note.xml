@@ -23,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:gravity="start|top"
                 tools:text="Title"/>
 
             <TextView
@@ -30,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/big_margin"
-                android:gravity="end"
+                android:gravity="end|bottom"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 tools:text="Date"/>
         </LinearLayout>

@@ -4,6 +4,7 @@ import com.example.notes.model.Note;
 import com.example.notes.model.NotesRepository;
 import com.example.notes.view.recycler.NotesListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NotesPresenter {
@@ -17,7 +18,18 @@ public class NotesPresenter {
     }
 
     public void requestNotes() {
-        List<Note> notes = repository.getAllNotes();
-        view.showNotes(notes);
+        ArrayList<AdapterItem> adapterItems = new ArrayList<>();
+        view.showNotes(adapterItems);
+    }
+
+    public void onNoteAdded(Note note) {
+        NoteAdapterItem adapterItem = new NoteAdapterItem(note, note.getTitle(), note.getMessage(), note.getCreatedAt());
+
+        view.onNoteAdded(adapterItem);
+    }
+
+    public void removeNote(Note selectedNote) {
+        repository.delete(selectedNote);
+        view.onNoteRemoved(selectedNote);
     }
 }

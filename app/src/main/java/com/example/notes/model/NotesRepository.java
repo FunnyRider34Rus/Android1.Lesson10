@@ -4,5 +4,9 @@ import java.util.List;
 
 public interface NotesRepository {
 
-    public List<Note> getAllNotes();
+    List<Note> getAllNotes();
+
+    void save(Note note);
+
+    void delete(Note note);
 }
